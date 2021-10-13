@@ -1,4 +1,5 @@
 // These code has been referenced from GeeksforSeeks. KhoaTrinh coded and implemented  after reviewing 
+import java.util.Random;
 import java.util.Scanner;
 class MergeSort
 {
@@ -65,7 +66,7 @@ class MergeSort
 	}
 
     /* A utility function to print array of size n */
-    static void printArray(int arr[])
+	static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
@@ -73,18 +74,14 @@ class MergeSort
         System.out.println();
     }
     static int[] createarray() {
-    	System.out.println("Enter the number of element in the array");
-    	Scanner input = new Scanner(System.in);
-		// Input the in-sorted array
-    	int n = input.nextInt();
-		int list_number[] = new int[n] ;
-		System.out.println("Enter the array");
-		for (int i = 0;i < n; i++) {
-			list_number[i] = input.nextInt();
-		}
-		return list_number ;
-    	
-    }
+    	 Random rd = new Random(); // creating Random object
+	     int[] arr = new int[20];
+	     for (int i = 0; i < arr.length; i++) {
+	    	 arr[i] = rd.nextInt(); 
+	     }
+	     return arr;
+	     
+	}
  
     // Driver code
     public static void main(String[] args) {
@@ -101,3 +98,4 @@ class MergeSort
 		printArray(arr);
 		}
 	}
+	

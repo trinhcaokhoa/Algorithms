@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class BubbleSort {
 	public static void Bubble( int arr[], int high) {
@@ -18,16 +19,16 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		// Create a new array
-		Scanner input = new Scanner(System.in);
-		int n = input.nextInt();
-		int list_number[] = new int[n] ;
-		for (int i = 0;i < n; i++) {
-			list_number[i] = input.nextInt();
-		}
+		 Random rd = new Random(); // creating Random object
+	     int[] arr = new int[20];
+	     for (int i = 0; i < arr.length; i++) {
+	    	 arr[i] = rd.nextInt(); 
+	         
+	      }
 		
-		Bubble(list_number, list_number.length -2);
-		for (int i = 0;i < n; i++) {
-			System.out.print(list_number[i]);
+		Bubble(arr, arr.length -2);
+		for (int i = 0;i < 20; i++) {
+			System.out.print(arr[i]+' '+' ');
 		}
 	}
 }
